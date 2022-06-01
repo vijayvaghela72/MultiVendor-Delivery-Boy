@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:deliveryboy_multivendor/Helper/Session.dart';
 import 'package:deliveryboy_multivendor/Helper/app_btn.dart';
-import 'package:deliveryboy_multivendor/Helper/color.dart';
 import 'package:deliveryboy_multivendor/Helper/constant.dart';
 import 'package:deliveryboy_multivendor/Helper/string.dart';
 import 'package:flutter/cupertino.dart';
