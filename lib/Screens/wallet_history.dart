@@ -440,7 +440,7 @@ class StateWallet extends State<WalletHistory> with TickerProviderStateMixin {
                               autovalidateMode:
                                   AutovalidateMode.onUserInteraction,
                               decoration: InputDecoration(
-                                hintText:  BANK_DETAIL,
+                                hintText: BANK_DETAIL,
                                 hintStyle: Theme.of(this.context)
                                     .textTheme
                                     .subtitle1!
