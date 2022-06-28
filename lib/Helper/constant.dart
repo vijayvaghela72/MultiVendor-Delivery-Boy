@@ -1,8 +1,7 @@
 final String appName = 'Delivery Boy eShop Multivendor';
 
-final String baseUrl =
-    'http://vendoreshop.wrteam.co.in/delivery_boy/app/v1/api/';
-final String jwtKey = "975578106e71b1a66ef78ba7bbb82e9da5195b6f";
+final String baseUrl = 'https://vendor.eshopweb.store/delivery_boy/app/v1/api/';
+final String jwtKey = "26c24b4b956fd695fbd5fd85a883a7a0abe36043";
 
 final int timeOut = 50;
 const int perPage = 10;

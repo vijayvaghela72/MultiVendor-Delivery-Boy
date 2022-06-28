@@ -127,5 +127,15 @@
   "Order No":"Order No",
   "Update Status":"Update Status",
   "Change Language":"Change Language",
-  "Choose Language":"Choose Language"
+  "Choose Language":"Choose Language",
+  "Delete Account":"Delete Account",
+ "Your all return order request, ongoing orders, wallet amount and also your all data will be deleted. So you will not able to access this account further. We understand if you want you can create new account to use this application.":"Your all return order request, ongoing orders, wallet amount and also your all data will be deleted. So you will not able to access this account further. We understand if you want you can create new account to use this application.",
+ "Please Verify Password":"Please Verify Password",
+ "Delete Now":"Delete Now",
+ "delivered":"Delivered",
+ "cancelled":"Cancelled",
+ "returned":"Returned",
+ "processed":"Processed",
+ "shipped":"Shipped",
+ "received":"Received"
 }

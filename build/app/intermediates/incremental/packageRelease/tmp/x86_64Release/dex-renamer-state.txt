@@ -1,0 +1,4 @@
+#Sun Jun 19 20:34:06 IST 2022
+base.0=D\:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

@@ -20,6 +20,7 @@ final Uri sendWithReqApi = Uri.parse(baseUrl + 'send_withdrawal_request');
 final Uri getWithReqApi = Uri.parse(baseUrl + 'get_withdrawal_request');
 final Uri getCashCollection =
 Uri.parse(baseUrl + 'get_delivery_boy_cash_collection');
+final Uri deleteDeliveryBoyApi = Uri.parse(baseUrl + 'delete_delivery_boy');
 
 const String USERNAME = 'username';
 const String ADDRESS = 'address';
@@ -194,8 +195,6 @@ const String RETURNED = 'returned';
 const String ITEM_RETURN = 'Item Return';
 const String ITEM_CANCEL = 'Item Cancel';
 
-
-
 const String ADD_ID = 'address_id';
 const String STYLE = 'style';
 const String ORDERITEMID='order_item_id';
@@ -219,6 +218,7 @@ const String TOTALALOOW='total_allowed_quantity';
 const String KEY = 'key';
 const String AMOUNT = 'amount';
 const String PAYMENT_ADD = 'payment_address';
+
 const String CONTACT = 'contact';
 const String TXNID = 'txn_id';
 const String SUCCESS = 'Success';

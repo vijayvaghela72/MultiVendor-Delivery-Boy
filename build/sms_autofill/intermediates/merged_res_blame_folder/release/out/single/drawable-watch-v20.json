@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\sms_autofill\\intermediates\\res\\merged\\release\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\59b3745bb9c576d8c0d8354e2211adeb\\transformed\\jetified-play-services-auth-19.2.0\\res\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\sms_autofill\\intermediates\\res\\merged\\release\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\59b3745bb9c576d8c0d8354e2211adeb\\transformed\\jetified-play-services-auth-19.2.0\\res\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\sms_autofill\\intermediates\\res\\merged\\release\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\59b3745bb9c576d8c0d8354e2211adeb\\transformed\\jetified-play-services-auth-19.2.0\\res\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml"
+    }
+]

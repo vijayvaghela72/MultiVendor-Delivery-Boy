@@ -961,110 +961,138 @@ class StateOrder extends State<OrderDetail> with TickerProviderStateMixin {
                                 child: Row(
                                   children: [
                                     Expanded(
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                          right: 8.0,
-                                        ),
-                                        child: DropdownButtonFormField(
-                                          dropdownColor: lightWhite,
-                                          isDense: true,
-                                          iconEnabledColor: fontColor,
-                                          //iconSize: 40,
-                                          hint: Text(
-                                            getTranslated(
-                                                context, UpdateStatus)!,
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .subtitle2!
-                                                .copyWith(
-                                                  color: fontColor,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                          decoration: const InputDecoration(
-                                            filled: true,
-                                            isDense: true,
-                                            fillColor: lightWhite,
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                              vertical: 10,
-                                              horizontal: 10,
-                                            ),
-                                            enabledBorder: OutlineInputBorder(
-                                              borderSide: BorderSide(
+                                      flex: 6,
+                                      child: DropdownButtonFormField(
+                                        dropdownColor: lightWhite,
+                                        isDense: true,
+                                        iconEnabledColor: fontColor,
+                                        //iconSize: 40,
+                                        hint: Text(
+                                          getTranslated(context, UpdateStatus)!,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .subtitle2!
+                                              .copyWith(
                                                 color: fontColor,
+                                                fontWeight: FontWeight.bold,
                                               ),
+                                        ),
+                                        decoration: const InputDecoration(
+                                          filled: true,
+                                          isDense: true,
+                                          fillColor: lightWhite,
+                                          contentPadding: EdgeInsets.symmetric(
+                                            vertical: 10,
+                                            horizontal: 10,
+                                          ),
+                                          enabledBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: fontColor,
                                             ),
                                           ),
-                                          value: orderItem.status,
-                                          onChanged: (dynamic newValue) {
-                                            setState(
-                                              () {
-                                                orderItem.curSelected =
-                                                    newValue;
-                                              },
+                                        ),
+                                        value: orderItem.status,
+                                        onChanged: (dynamic newValue) {
+                                          setState(
+                                            () {
+                                              orderItem.curSelected = newValue;
+                                            },
+                                          );
+                                        },
+                                        items: statusList.map(
+                                          (String st) {
+                                            return DropdownMenuItem<String>(
+                                              value: st,
+                                              child: Text(
+                                                () {
+                                                  if (capitalize(st) ==
+                                                      "Received") {
+                                                    return getTranslated(
+                                                        context, "received")!;
+                                                  } else if (capitalize(st) ==
+                                                      "Processed") {
+                                                    return getTranslated(
+                                                        context, "processed")!;
+                                                  } else if (capitalize(st) ==
+                                                      "Shipped") {
+                                                    return getTranslated(
+                                                        context, "shipped")!;
+                                                  } else if (capitalize(st) ==
+                                                      "Delivered") {
+                                                    return getTranslated(
+                                                        context, "delivered")!;
+                                                  } else if (capitalize(st) ==
+                                                      "Returned") {
+                                                    return getTranslated(
+                                                        context, "returned")!;
+                                                  } else if (capitalize(st) ==
+                                                      "Cancelled") {
+                                                    return getTranslated(
+                                                        context, "cancelled")!;
+                                                  }
+                                                  return capitalize(st);
+                                                }(),
+                                                maxLines: 1,
+                                                overflow: TextOverflow.ellipsis,
+                                                softWrap: false,
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .subtitle2!
+                                                    .copyWith(
+                                                      color: fontColor,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                              ),
                                             );
                                           },
-                                          items: statusList.map(
-                                            (String st) {
-                                              return DropdownMenuItem<String>(
-                                                value: st,
-                                                child: Text(
-                                                  capitalize(st),
-                                                  style: Theme.of(context)
-                                                      .textTheme
-                                                      .subtitle2!
-                                                      .copyWith(
-                                                        color: fontColor,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
-                                                ),
-                                              );
-                                            },
-                                          ).toList(),
-                                        ),
+                                        ).toList(),
                                       ),
                                     ),
-                                    RawMaterialButton(
-                                      constraints: const BoxConstraints.expand(
-                                        width: 42,
-                                        height: 42,
-                                      ),
-                                      onPressed: () {
-                                        if (orderItem.item_otp != "" &&
-                                            orderItem.item_otp!.isNotEmpty &&
-                                            orderItem.item_otp != "0" &&
-                                            orderItem.curSelected == DELIVERD) {
-                                          otpDialog(
-                                            orderItem.curSelected,
-                                            orderItem.item_otp,
-                                            model.id,
-                                            true,
-                                            i,
-                                          );
-                                        } else {
-                                          updateOrder(
-                                            orderItem.curSelected,
-                                            model.id,
-                                            true,
-                                            i,
-                                            orderItem.item_otp,
-                                          );
-                                        }
-                                      },
-                                      elevation: 2.0,
-                                      fillColor: fontColor,
-                                      padding: const EdgeInsets.only(left: 5),
-                                      child: const Align(
-                                        alignment: Alignment.center,
-                                        child: Icon(
-                                          Icons.send,
-                                          size: 20,
-                                          color: white,
+                                    Expanded(
+                                      flex: 1,
+                                      child: RawMaterialButton(
+                                        constraints:
+                                            const BoxConstraints.expand(
+                                          width: 42,
+                                          height: 42,
                                         ),
+                                        onPressed: () {
+                                          if (orderItem.item_otp != "" &&
+                                              orderItem.item_otp!.isNotEmpty &&
+                                              orderItem.item_otp != "0" &&
+                                              orderItem.curSelected ==
+                                                  DELIVERD) {
+                                            otpDialog(
+                                              orderItem.curSelected,
+                                              orderItem.item_otp,
+                                              model.id,
+                                              true,
+                                              i,
+                                            );
+                                          } else {
+                                            updateOrder(
+                                              orderItem.curSelected,
+                                              model.id,
+                                              true,
+                                              i,
+                                              orderItem.item_otp,
+                                            );
+                                          }
+                                        },
+                                        elevation: 2.0,
+                                        fillColor: fontColor,
+                                        padding: const EdgeInsets.only(left: 5),
+                                        child: const Align(
+                                          alignment: Alignment.center,
+                                          child: Icon(
+                                            Icons.send,
+                                            size: 20,
+                                            color: white,
+                                          ),
+                                        ),
+                                        shape: const CircleBorder(),
                                       ),
-                                      shape: const CircleBorder(),
                                     )
                                   ],
                                 ),

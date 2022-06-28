@@ -39,6 +39,14 @@ bool isLoadingItems = true;
 class StateHome extends State<Home> with TickerProviderStateMixin {
   int curDrwSel = 0;
   List<String?> languageList = [];
+  int currentIndex = 0;
+  String? verifyPassword;
+  String? mobileNumber;
+
+  String? errorTrueMessage;
+  FocusNode? passFocus = FocusNode();
+  final passwordController = TextEditingController();
+
   bool _isNetworkAvail = true;
   List<Order_Model> tempList = [];
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -375,6 +383,9 @@ class StateHome extends State<Home> with TickerProviderStateMixin {
                   : _getDivider(),
               CUR_USERID == "" || CUR_USERID == null
                   ? Container()
+                  : _getDrawerItem(13, "Delete Account", Icons.delete),
+              CUR_USERID == "" || CUR_USERID == null
+                  ? Container()
                   : _getDrawerItem(
                       11,
                       getTranslated(context, LOGOUT)!,
@@ -537,6 +548,14 @@ class StateHome extends State<Home> with TickerProviderStateMixin {
               },
             );
             languageDialog();
+          } else if (title == "Delete Account") {
+            setState(
+              () {
+                curDrwSel = index;
+              },
+            );
+            currentIndex = 0;
+            deleteAccountDailog();
           } else if (title == getTranslated(context, NOTIFICATION)) {
             setState(
               () {
@@ -597,6 +616,283 @@ class StateHome extends State<Home> with TickerProviderStateMixin {
         },
       ),
     );
+  }
+
+//=================================== delete user dialog =======================
+//==============================================================================
+
+  deleteAccountDailog() async {
+    await dialogAnimate(
+      context,
+      StatefulBuilder(
+        builder: (BuildContext context, setState) {
+          return AlertDialog(
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(5.0),
+              ),
+            ),
+            content: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                //==================
+                // when currentIndex == 0
+                //==================
+                currentIndex == 0
+                    ? Text(
+                        getTranslated(context, "Delete Account")!,
+                        style: Theme.of(this.context)
+                            .textTheme
+                            .subtitle2!
+                            .copyWith(
+                              color: Theme.of(this.context).colorScheme.error,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      )
+                    : Container(),
+                currentIndex == 0
+                    ? const SizedBox(
+                        height: 10,
+                      )
+                    : Container(),
+                currentIndex == 0
+                    ? Text(
+                        getTranslated(
+                          context,
+                          'Your all return order request, ongoing orders, wallet amount and also your all data will be deleted. So you will not able to access this account further. We understand if you want you can create new account to use this application.',
+                        )!,
+                        style: Theme.of(this.context)
+                            .textTheme
+                            .subtitle2!
+                            .copyWith(),
+                      )
+                    : Container(),
+                //==================
+                // when currentIndex == 1
+                //==================
+                currentIndex == 1
+                    ? Text(
+                        getTranslated(context, "Please Verify Password")!,
+                        style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                              color: black,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      )
+                    : Container(),
+                currentIndex == 1
+                    ? const SizedBox(
+                        height: 25,
+                      )
+                    : Container(),
+                currentIndex == 1
+                    ? Container(
+                        height: 53,
+                        width: double.maxFinite,
+                        decoration: BoxDecoration(
+                          color: lightWhite1,
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        alignment: Alignment.center,
+                        child: TextFormField(
+                          style: TextStyle(
+                              color: black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13),
+                          onFieldSubmitted: (v) {
+                            FocusScope.of(this.context).requestFocus(passFocus);
+                          },
+                          keyboardType: TextInputType.text,
+                          obscureText: true,
+                          controller: passwordController,
+                          focusNode: passFocus,
+                          textInputAction: TextInputAction.next,
+                          onChanged: (String? value) {
+                            verifyPassword = value;
+                          },
+                          onSaved: (String? value) {
+                            verifyPassword = value;
+                          },
+                          decoration: InputDecoration(
+                            contentPadding: const EdgeInsets.symmetric(
+                              horizontal: 13,
+                              vertical: 5,
+                            ),
+                            suffixIconConstraints: const BoxConstraints(
+                                minWidth: 40, maxHeight: 20),
+                            hintText: 'Password',
+                            hintStyle: const TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 13),
+                            fillColor: lightWhite,
+                            border: InputBorder.none,
+                          ),
+                        ),
+                      )
+                    : Container(),
+                //==================
+                // when currentIndex == 2
+                //==================
+
+                currentIndex == 2
+                    ? const Center(child: CircularProgressIndicator())
+                    : Container(),
+                //==================
+                // when currentIndex == 2
+                //==================
+                currentIndex == 3
+                    ? Center(
+                        child: Text(errorTrueMessage ??
+                            "something Error Please Try again...!"),
+                      )
+                    : Container(),
+              ],
+            ),
+            actions: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  currentIndex == 0
+                      ? TextButton(
+                          child: Text(
+                            "No",
+                            style: Theme.of(this.context)
+                                .textTheme
+                                .subtitle2!
+                                .copyWith(
+                                  color: lightBlack,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).pop(false);
+                          },
+                        )
+                      : Container(),
+                  currentIndex == 0
+                      ? TextButton(
+                          child: Text(
+                            "Yes",
+                            style: Theme.of(this.context)
+                                .textTheme
+                                .subtitle2!
+                                .copyWith(
+                                  color:
+                                      Theme.of(this.context).colorScheme.error,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                          ),
+                          onPressed: () {
+                            setState(
+                              () {
+                                currentIndex = 1;
+                              },
+                            );
+                          },
+                        )
+                      : Container(),
+                ],
+              ),
+              currentIndex == 1
+                  ? TextButton(
+                      child: Text(
+                        getTranslated(context, "Delete Now")!,
+                        style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                              color: Theme.of(context).colorScheme.error,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                      onPressed: () async {
+                        setState(
+                          () {
+                            currentIndex = 2;
+                          },
+                        );
+
+                        //
+
+                        await checkNetwork(mobileNumber ?? "").then(
+                          (value) {
+                            setState(
+                              () {
+                                currentIndex = 3;
+                              },
+                            );
+                          },
+                        );
+                      },
+                    )
+                  : Container(),
+            ],
+          );
+        },
+      ),
+    );
+  }
+
+//=================================== Login API for Verfication ================
+//==============================================================================
+
+  Future<void> checkNetwork(
+    String mobile,
+  ) async {
+    _isNetworkAvail = await isNetworkAvailable();
+    if (_isNetworkAvail) {
+      print("mobile number : $mobile");
+      deleteAccountAPI(mobile);
+    } else {
+      Future.delayed(const Duration(seconds: 2)).then(
+        (_) async {
+          await buttonController!.reverse();
+          if (mounted) {
+            setState(
+              () {
+                _isNetworkAvail = false;
+              },
+            );
+          }
+        },
+      );
+    }
+  }
+
+  Future<void> deleteAccountAPI(String mobile) async {
+    var data = {
+      "user_id": CUR_USERID,
+      "mobile": mobile,
+      "password": verifyPassword
+    };
+    print("parameter :$data");
+
+    Response response =
+        await post(deleteDeliveryBoyApi, body: data, headers: headers)
+            .timeout(Duration(seconds: timeOut));
+    var getdata = json.decode(response.body);
+    print("getdata : $getdata");
+
+    bool error = getdata['error'];
+    String? msg = getdata['message'];
+    print(getdata);
+    if (!error) {
+      currentIndex = 0;
+      verifyPassword = "";
+      setsnackbar(msg!, context);
+      clearUserSession();
+      Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(
+            builder: (context) => Login(),
+          ),
+          (Route<dynamic> route) => false);
+    } else {
+      errorTrueMessage = msg;
+      currentIndex = 4;
+      setState(() {});
+      verifyPassword = "";
+      //  Navigator.pop(context);
+      setsnackbar(msg!, context);
+    }
   }
 
 //==============================================================================
@@ -726,6 +1022,7 @@ class StateHome extends State<Home> with TickerProviderStateMixin {
 
   @override
   void dispose() {
+    passwordController.dispose();
     buttonController!.dispose();
     super.dispose();
   }
@@ -931,7 +1228,7 @@ class StateHome extends State<Home> with TickerProviderStateMixin {
     if (_isNetworkAvail) {
       try {
         CUR_USERID = await getPrefrence(ID);
-
+        mobileNumber = await getPrefrence(MOBILE);
         var parameter = {ID: CUR_USERID};
 
         Response response =
@@ -1015,7 +1312,26 @@ class StateHome extends State<Home> with TickerProviderStateMixin {
                           borderRadius:
                               const BorderRadius.all(Radius.circular(4.0))),
                       child: Text(
-                        capitalize(model.itemList![0].status!),
+                        () {
+                          if (model.itemList![0].status! == "delivered") {
+                            return getTranslated(context, "delivered")!;
+                          } else if (model.itemList![0].status! ==
+                              "cancelled") {
+                            return getTranslated(context, "cancelled")!;
+                          } else if (model.itemList![0].status! == "returned") {
+                            return getTranslated(context, "returned")!;
+                          } else if (model.itemList![0].status! ==
+                              "processed") {
+                            return getTranslated(context, "processed")!;
+                          } else if (model.itemList![0].status! == "shipped") {
+                            return getTranslated(context, "shipped")!;
+                          } else if (model.itemList![0].status! == "received") {
+                            return getTranslated(context, "received")!;
+                          } else {
+                            return capitalize(model.itemList![0].status!);
+                          }
+                        }(),
+                        // capitalize(model.itemList![0].status!),
                         style: const TextStyle(color: white),
                       ),
                     )
@@ -1249,7 +1565,7 @@ class StateHome extends State<Home> with TickerProviderStateMixin {
         String? msg = getdata["message"];
         if (!error) {
           CUR_CURRENCY = getdata["currency"];
-          DECIMAL_POINTS  = getdata['decimal_point'];
+          DECIMAL_POINTS = getdata['decimal_point'];
           supportedLocale = getdata['supported_locals'];
           IS_APP_UNDER_MAINTENANCE =
               getdata['is_delivery_boy_app_under_maintenance'];

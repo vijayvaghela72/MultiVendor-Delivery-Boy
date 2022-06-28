@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\firebase_messaging\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notification_bg_normal.9.png",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\9e491e8baf18c39242a17c7d77970de9\\transformed\\core-1.6.0\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\firebase_messaging\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\9e491e8baf18c39242a17c7d77970de9\\transformed\\core-1.6.0\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\firebase_messaging\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\9e491e8baf18c39242a17c7d77970de9\\transformed\\core-1.6.0\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\firebase_messaging\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\9e491e8baf18c39242a17c7d77970de9\\transformed\\core-1.6.0\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\firebase_messaging\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\googleg_disabled_color_18.png",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\c7c00e7e83d0bb37aa2524d06e861c4b\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-xhdpi-v4\\googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\firebase_messaging\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\googleg_standard_color_18.png",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\c7c00e7e83d0bb37aa2524d06e861c4b\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-xhdpi-v4\\googleg_standard_color_18.png"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\firebase_messaging\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\c7c00e7e83d0bb37aa2524d06e861c4b\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\firebase_messaging\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\c7c00e7e83d0bb37aa2524d06e861c4b\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\firebase_messaging\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_full_open_on_phone.png",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\c7c00e7e83d0bb37aa2524d06e861c4b\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\firebase_messaging\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\c7c00e7e83d0bb37aa2524d06e861c4b\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\firebase_messaging\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\c7c00e7e83d0bb37aa2524d06e861c4b\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\firebase_messaging\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\9e491e8baf18c39242a17c7d77970de9\\transformed\\core-1.6.0\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
+    }
+]

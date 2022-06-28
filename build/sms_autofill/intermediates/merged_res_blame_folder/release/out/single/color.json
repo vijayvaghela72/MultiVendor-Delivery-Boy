@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\sms_autofill\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_tint.xml",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\087a357f1110321d99999539362e3155\\transformed\\jetified-play-services-base-17.5.0\\res\\color\\common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\sms_autofill\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\087a357f1110321d99999539362e3155\\transformed\\jetified-play-services-base-17.5.0\\res\\color\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "D:\\ShreeSoftTech\\MultiVendor\\Delivery Boy v2.0.4\\Delivery Boy v2.0.3\\build\\sms_autofill\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\087a357f1110321d99999539362e3155\\transformed\\jetified-play-services-base-17.5.0\\res\\color\\common_google_signin_btn_text_light.xml"
+    }
+]
